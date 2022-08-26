@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ExerciseController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func addExerciseButtonTapped(_ sender: Any) {
+    }
 }
 
