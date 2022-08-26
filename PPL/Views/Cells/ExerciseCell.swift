@@ -9,6 +9,7 @@ import UIKit
 
 class ExerciseCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var nameLabel          : UILabel!
     @IBOutlet weak var setsLabel          : UILabel!
     @IBOutlet weak var repsLabel          : UILabel!
@@ -16,14 +17,12 @@ class ExerciseCell: UITableViewCell {
     @IBOutlet weak var cellBackgroundImage: UIImageView!
     
     
+    // MARK: - Life Cycles
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-
 }

@@ -21,6 +21,8 @@ struct CoreDataManager {
         return container
     }()
     
+    
+    // MARK: - Create Exercise
     func createItem(name: String, sets: String, reps: String, rest: String) -> Exercise? {
         let context = persistentContainer.viewContext
         let note = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as! Exercise
@@ -38,6 +40,8 @@ struct CoreDataManager {
         return nil
     }
     
+    
+    // MARK: - Fetch Exercise
     func fetchItem() -> [Exercise]? {
         let context      = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<Exercise>(entityName: "Exercise")
@@ -51,6 +55,8 @@ struct CoreDataManager {
         return nil
     }
     
+    
+    // MARK: - Update Exercise
     func updateItem(name: String, sets: String, reps: String, rest: String, exerciseObject: Exercise) {
         let context = persistentContainer.viewContext
         
@@ -65,6 +71,8 @@ struct CoreDataManager {
         }
     }
     
+    
+    // MARK: - Delete Exercise
     func deleteItem(exerciseObject: Exercise) {
         let context = persistentContainer.viewContext
         context.delete(exerciseObject)
