@@ -19,6 +19,8 @@
 		C220533E28B9021A005EA707 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533D28B9021A005EA707 /* CoreDataManager.swift */; };
 		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
+		C286110328BCA8BE0025BEAC /* SessionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110228BCA8BE0025BEAC /* SessionsController.swift */; };
+		C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110428BCA9100025BEAC /* SessionsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C220533D28B9021A005EA707 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		C286110228BCA8BE0025BEAC /* SessionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsController.swift; sourceTree = "<group>"; };
+		C286110428BCA9100025BEAC /* SessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				C220532128B8EFBE005EA707 /* ExerciseController.swift */,
 				C220533928B8F6BC005EA707 /* DetailController.swift */,
 				C286110028BCA4C40025BEAC /* TimerController.swift */,
+				C286110228BCA8BE0025BEAC /* SessionsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C220533B28B8F70E005EA707 /* ExerciseCell.swift */,
+				C286110428BCA9100025BEAC /* SessionsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 				C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */,
 				C220532028B8EFBE005EA707 /* SceneDelegate.swift in Sources */,
 				C220533E28B9021A005EA707 /* CoreDataManager.swift in Sources */,
+				C286110328BCA8BE0025BEAC /* SessionsController.swift in Sources */,
 				C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */,
+				C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

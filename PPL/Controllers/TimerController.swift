@@ -10,12 +10,14 @@ import UIKit
 class TimerController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var startTimeTitle: UIButton!
-    @IBOutlet weak var timerLabel    : UILabel!
-    
+    @IBOutlet weak var startTimeTitle : UIButton!
+    @IBOutlet weak var timerLabel     : UILabel!
+    @IBOutlet weak var repCounterLabel: UILabel!
+    @IBOutlet weak var clearStepper   : UIButton!
+    @IBOutlet weak var stepper        : UIStepper!
     
     // MARK: - Initializers
-    var timeRemaining :  Int = 30
+    var timeRemaining :  Int = 60
     var timer         :  Timer!
     var isTimerRunning:  Bool = false
     
@@ -25,6 +27,7 @@ class TimerController: UIViewController {
         super.viewDidLoad()
         
         self.timerLabel.text = timeString(time: TimeInterval(timeRemaining))
+        stepper.transform    = stepper.transform.scaledBy(x: 1.25, y: 1.25)
     }
     
     
@@ -40,7 +43,7 @@ class TimerController: UIViewController {
             timer.invalidate()
             startTimeTitle.titleLabel?.text = "Start"
             isTimerRunning                  = false
-            timeRemaining                   = 30
+            timeRemaining                   = 60
         } else {
             timeRemaining                  -= 1
             timerLabel.text                 = timeString(time: TimeInterval(timeRemaining))
@@ -70,7 +73,7 @@ class TimerController: UIViewController {
     // MARK: - IBActions
     @IBAction func resetTimeTapped(_ sender: Any) {
         timer.invalidate()
-        timeRemaining                   = 30
+        timeRemaining                   = 60
         timerLabel.text                 = timeString(time: TimeInterval(timeRemaining))
         isTimerRunning                  = false
         startTimeTitle.titleLabel?.text = "Start"
@@ -98,5 +101,14 @@ class TimerController: UIViewController {
             timerLabel.text              = timeString(time: TimeInterval(timeRemaining))
             isTimerRunning               = false
         }
+    }
+    
+    @IBAction func clearStepperTapped(_ sender: Any) {
+        stepper.value        = 0
+        repCounterLabel.text = "0"
+    }
+    
+    @IBAction func repStepperTapped(_ sender: UIStepper) {
+        repCounterLabel.text = String(format: "%.0f", sender.value)
     }
 }
