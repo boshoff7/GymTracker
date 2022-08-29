@@ -17,6 +17,7 @@
 		C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533928B8F6BC005EA707 /* DetailController.swift */; };
 		C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533B28B8F70E005EA707 /* ExerciseCell.swift */; };
 		C220533E28B9021A005EA707 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533D28B9021A005EA707 /* CoreDataManager.swift */; };
+		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C220533928B8F6BC005EA707 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		C220533B28B8F70E005EA707 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		C220533D28B9021A005EA707 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				C220533628B8F62C005EA707 /* Views */,
 				C220533528B8F625005EA707 /* Controllers */,
 				C220533428B8F61D005EA707 /* Resources */,
+				C28610FD28BC9FD00025BEAC /* Extensions */,
 				C220531D28B8EFBE005EA707 /* AppDelegate.swift */,
 				C220531F28B8EFBE005EA707 /* SceneDelegate.swift */,
 				C220532E28B8EFC3005EA707 /* Info.plist */,
@@ -117,6 +120,14 @@
 				C220533B28B8F70E005EA707 /* ExerciseCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C28610FD28BC9FD00025BEAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
 				C220532228B8EFBE005EA707 /* ExerciseController.swift in Sources */,
 				C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */,

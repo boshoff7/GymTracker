@@ -25,7 +25,8 @@ class DetailController: UIViewController {
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
+        addDoneButton(textField1: nameTextField, textField2: setsTextField, textField3: repsTextField, textField4: restTextField)
     }
     
     override func viewWillAppear(_ animated: Bool) {
