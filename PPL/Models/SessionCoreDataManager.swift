@@ -61,9 +61,9 @@ struct SessionCoreDataManager {
     }
     
     // MARK: - Delete Session
-    func deleteSession(exerciseObject: Session) {
+    func deleteSession(sessionObject: Session) {
         let context = persistentContainer.viewContext
-        context.delete(exerciseObject)
+        context.delete(sessionObject)
         
         do {
             try context.save()

@@ -39,6 +39,7 @@ class SessionsController: UIViewController {
         let action    = UIAlertAction(title: "Add Session", style: .default) { (action) in
             let newSession  = Session(context: self.context)
             newSession.name = textField.text
+            SessionCoreDataManager.functions.createSession(name: newSession.name!)
             self.session.append(newSession)
             self.tableView.reloadData()
         }
@@ -65,7 +66,16 @@ extension SessionsController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionsCell", for: indexPath) as! SessionsCell
         cell.layer.cornerRadius    = 10
         cell.sessionNameLabel.text = session[arrayIndexReverse].name
-        cell.dayLabel.text         = String(indexPath.row + 1)
+        cell.dayLabel.text         = String((session.count) - indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let arrayIndexReverse = (session.count - 1) - indexPath.section
+            SessionCoreDataManager.functions.deleteSession(sessionObject: session[arrayIndexReverse])
+            session = SessionCoreDataManager.functions.fetchSession()!
+            tableView.deleteRows(at: [indexPath], with: .bottom)
+        }
     }
 }
