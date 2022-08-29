@@ -30,15 +30,15 @@ class DetailController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if update == true {
+//        if update == true {
             nameTextField.text = exercise.name
             setsTextField.text = String(exercise.sets)
             repsTextField.text = String(exercise.reps)
             restTextField.text = String(exercise.rest)
             self.title = "Edit"
-        } else {
-            self.title = "Add new"
-        }
+//        } else {
+//            self.title = "Add new"
+//        }
     }
 
     
@@ -46,9 +46,9 @@ class DetailController: UIViewController {
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         if nameTextField.text! != "" && setsTextField.text! != "" && repsTextField.text! != "" && restTextField.text! != "" {
             if update == true {
-                CoreDataManager.functions.updateItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!, exerciseObject: exercise)
+                ExerciseCoreDataManager.functions.updateItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!, exerciseObject: exercise)
             } else {
-                CoreDataManager.functions.createItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!)
+                ExerciseCoreDataManager.functions.createItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!)
             }
             self.navigationController?.popViewController(animated: true)
         }

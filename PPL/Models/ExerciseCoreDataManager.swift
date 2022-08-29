@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-struct CoreDataManager {
+struct ExerciseCoreDataManager {
     
-    static let functions = CoreDataManager()
+    static let functions = ExerciseCoreDataManager()
     let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "PPL")
         container.loadPersistentStores { storeDescription, error in

@@ -14,6 +14,10 @@ class SessionsController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    // MARK: - Initializers
+    var session = [Session]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +26,30 @@ class SessionsController: UIViewController {
         tableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        session = SessionCoreDataManager.functions.fetchSession()!
+        self.tableView.reloadData()
+    }
+    
     
     // MARK: - IBActions
-    @IBAction func addSessionTapped(_ sender: Any) {
+    @IBAction func addSessionTapped(_ sender: UIBarButtonItem) {
+        var textField = UITextField()
+        let alert     = UIAlertController(title: "Add New Session", message: "", preferredStyle: .alert)
+        let action    = UIAlertAction(title: "Add Session", style: .default) { (action) in
+            let newSession  = Session(context: self.context)
+            newSession.name = textField.text
+            self.session.append(newSession)
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new session"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -32,11 +57,15 @@ class SessionsController: UIViewController {
 // MARK: - TableView Delegate and Datasource Methods
 extension SessionsController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return session.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let arrayIndexReverse = (session.count - 1) - indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionsCell", for: indexPath) as! SessionsCell
+        cell.layer.cornerRadius    = 10
+        cell.sessionNameLabel.text = session[arrayIndexReverse].name
+        cell.dayLabel.text         = String(indexPath.row + 1)
         return cell
     }
 }

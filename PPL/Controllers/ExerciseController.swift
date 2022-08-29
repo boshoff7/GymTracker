@@ -9,22 +9,14 @@ import UIKit
 
 class ExerciseController: UIViewController {
     
-    // MARK: - Outlets
+    // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     
     // MARK: - Initializers
+    var exercise      : Exercise!
     var exerciseArray = [Exercise]()
-    
-    
-    // MARK: - Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! DetailController
-        if segue.identifier == "UpdateExercise" {
-            vc.update   = true
-            vc.exercise = exerciseArray[(exerciseArray.count-1) - ((tableView.indexPathForSelectedRow)!.row)]
-        }
-    }
+    let context       = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
     // MARK: - Life Cycles
@@ -35,8 +27,62 @@ class ExerciseController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        exerciseArray = CoreDataManager.functions.fetchItem()!
+        exerciseArray = ExerciseCoreDataManager.functions.fetchItem()!
         self.tableView.reloadData()
+    }
+    
+    
+    // MARK: - IBActions
+    
+    @IBAction func addExerciseTapped(_ sender: Any) {
+        var textField  = UITextField()
+        var textField1 = UITextField()
+        var textField2 = UITextField()
+        var textField3 = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Exercise", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add", style: .default) { (action) in
+            
+            let newExercise  = Exercise(context: self.context)
+            newExercise.name = textField.text!
+            newExercise.sets = Int16(textField1.text!)!
+            newExercise.reps = Int16(textField2.text!)!
+            newExercise.rest = Int16(textField3.text!)!
+            
+            self.exerciseArray.append(newExercise)
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(action)
+        
+        alert.addTextField { (field) in
+            textField             = field
+            textField.placeholder = "Exercise name"
+            textField.font        = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField1              = field
+            textField1.placeholder  = "Sets"
+            textField1.keyboardType = .numberPad
+            textField1.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField2              = field
+            textField2.placeholder  = "Reps"
+            textField2.keyboardType = .numberPad
+            textField2.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField3              = field
+            textField3.placeholder  = "Rest (seconds)"
+            textField3.keyboardType = .numberPad
+            textField3.font         = UIFont(name: "Avenir", size: 19)
+        }
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -61,10 +107,62 @@ extension ExerciseController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let arrayIndexReverse = (exerciseArray.count - 1) - indexPath.section
-            CoreDataManager.functions.deleteItem(exerciseObject: exerciseArray[arrayIndexReverse])
-            exerciseArray = CoreDataManager.functions.fetchItem()!
+            ExerciseCoreDataManager.functions.deleteItem(exerciseObject: exerciseArray[arrayIndexReverse])
+            exerciseArray = ExerciseCoreDataManager.functions.fetchItem()!
             tableView.deleteRows(at: [indexPath], with: .bottom)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell       = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as! ExerciseCell
+        var textField  = UITextField()
+        var textField1 = UITextField()
+        var textField2 = UITextField()
+        var textField3 = UITextField()
+        
+        let alert = UIAlertController(title: "Edit Exercise", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Update", style: .default) { (action) in
+            
+            let updatedExercise  = Exercise(context: self.context)
+            updatedExercise.name = textField.text!
+            updatedExercise.sets = Int16(textField1.text!)!
+            updatedExercise.reps = Int16(textField2.text!)!
+            updatedExercise.rest = Int16(textField3.text!)!
+            
+            self.exerciseArray.append(updatedExercise)
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(action)
+        
+        alert.addTextField { (field) in
+            textField             = field
+            textField.placeholder = cell.nameLabel.text
+            textField.font        = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField1              = field
+            textField1.placeholder  = "Sets"
+            textField1.keyboardType = .numberPad
+            textField1.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField2              = field
+            textField2.placeholder  = "Reps"
+            textField2.keyboardType = .numberPad
+            textField2.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { (field) in
+            textField3              = field
+            textField3.placeholder  = "Rest (seconds)"
+            textField3.keyboardType = .numberPad
+            textField3.font         = UIFont(name: "Avenir", size: 19)
+        }
+        present(alert, animated: true, completion: nil)
     }
 }
 
