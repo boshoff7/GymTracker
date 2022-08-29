@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fGA-Dg-Qf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5d6-Fg-kok">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vik-hd-rNd">
-                                <rect key="frame" x="10" y="161" width="370" height="649"/>
+                                <rect key="frame" x="10" y="161" width="370" height="600"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExerciseCell" id="XDB-4Y-vwv" customClass="ExerciseCell" customModule="PPL" customModuleProvider="target">
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.2307692307693" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="1998.4615384615383" y="3.5545023696682461"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="IPK-PX-VdT">
@@ -372,12 +372,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pz6-KJ-Z02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="4"/>
+            <point key="canvasLocation" x="2840" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rlH-lO-kHi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fGA-Dg-Qf8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="dumbbell.fill" catalog="system" id="YwG-Ro-4e4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="LgO-OI-OAr">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
@@ -390,7 +391,164 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIC-1o-vPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="1069.2307692307693" y="3.5545023696682461"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Zf3-sS-tXo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5d6-Fg-kok" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JFb-aB-YPj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fGA-Dg-Qf8" kind="relationship" relationship="viewControllers" id="jBa-AW-0QG"/>
+                        <segue destination="Nk7-3G-QRV" kind="relationship" relationship="viewControllers" id="tU1-KL-XVN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4l-hJ-g6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="697"/>
+        </scene>
+        <!--Timer Controller-->
+        <scene sceneID="pgv-1a-r9z">
+            <objects>
+                <viewController id="p9T-UI-NNg" customClass="TimerController" customModule="PPL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbk-vT-6WQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-eB-5KQ">
+                                <rect key="frame" x="30" y="171" width="330" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="cpB-hE-0bb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="80"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-3c-LGg">
+                                <rect key="frame" x="30" y="421" width="330" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dY-rD-oSt">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-15 sec">
+                                            <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="subtractTimeTapped:" destination="p9T-UI-NNg" eventType="touchUpInside" id="4bj-lU-aqw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pli-yO-Xcj">
+                                        <rect key="frame" x="190" y="0.0" width="140" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+15 sec">
+                                            <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addTimeTapped:" destination="p9T-UI-NNg" eventType="touchUpInside" id="Sh1-c7-yNc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DJK-hW-AZM"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuB-ap-Lxk">
+                                <rect key="frame" x="30" y="551" width="330" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tp3-sj-SPN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTimeTapped:" destination="p9T-UI-NNg" eventType="touchUpInside" id="1Xq-ZW-WY3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-GV-73G">
+                                <rect key="frame" x="30" y="631" width="330" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GAM-xi-vAh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Reset">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetTimeTapped:" destination="p9T-UI-NNg" eventType="touchUpInside" id="KLY-Cv-fFG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XGy-y5-O2Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MuB-ap-Lxk" firstAttribute="top" secondItem="6x0-3c-LGg" secondAttribute="bottom" constant="90" id="798-lV-31v"/>
+                            <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="MuB-ap-Lxk" secondAttribute="trailing" constant="30" id="7Ia-6p-rXo"/>
+                            <constraint firstItem="6x0-3c-LGg" firstAttribute="top" secondItem="mzG-eB-5KQ" secondAttribute="bottom" constant="130" id="A6G-ZQ-NXh"/>
+                            <constraint firstItem="MuB-ap-Lxk" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="30" id="F8H-AN-c16"/>
+                            <constraint firstItem="mzG-eB-5KQ" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="30" id="KIN-fZ-190"/>
+                            <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="fkh-GV-73G" secondAttribute="trailing" constant="30" id="LZU-na-p3V"/>
+                            <constraint firstItem="fkh-GV-73G" firstAttribute="top" secondItem="MuB-ap-Lxk" secondAttribute="bottom" constant="40" id="M4P-hd-aXU"/>
+                            <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="mzG-eB-5KQ" secondAttribute="trailing" constant="30" id="NJN-1f-8TK"/>
+                            <constraint firstItem="6x0-3c-LGg" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="30" id="eJe-Tt-TU4"/>
+                            <constraint firstItem="fkh-GV-73G" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="30" id="i6l-b6-EsP"/>
+                            <constraint firstItem="mzG-eB-5KQ" firstAttribute="top" secondItem="XGy-y5-O2Y" secondAttribute="top" constant="80" id="ndT-H4-4v9"/>
+                            <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="6x0-3c-LGg" secondAttribute="trailing" constant="30" id="qo0-EX-kcG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kN4-8d-RMM"/>
+                    <connections>
+                        <outlet property="startTimeTitle" destination="MuB-ap-Lxk" id="mbc-ZT-KZb"/>
+                        <outlet property="timerLabel" destination="mzG-eB-5KQ" id="tVd-Gl-7sn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIq-Gd-dL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1998" y="697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tcB-aK-Ydp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk7-3G-QRV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="s8N-Kb-MHZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d5c-Ow-52t">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="p9T-UI-NNg" kind="relationship" relationship="rootViewController" id="PYp-0G-4s4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWQ-Km-644" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="697"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -399,7 +557,9 @@
     <color key="tintColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="blue5" width="318" height="159"/>
+        <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -18,6 +18,7 @@
 		C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533B28B8F70E005EA707 /* ExerciseCell.swift */; };
 		C220533E28B9021A005EA707 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533D28B9021A005EA707 /* CoreDataManager.swift */; };
 		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
+		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C220533B28B8F70E005EA707 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		C220533D28B9021A005EA707 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
+		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				C220532128B8EFBE005EA707 /* ExerciseController.swift */,
 				C220533928B8F6BC005EA707 /* DetailController.swift */,
+				C286110028BCA4C40025BEAC /* TimerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			files = (
 				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
+				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
 				C220532228B8EFBE005EA707 /* ExerciseController.swift in Sources */,
 				C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */,
 				C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */,
