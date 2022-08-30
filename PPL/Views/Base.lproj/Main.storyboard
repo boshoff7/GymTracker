@@ -214,6 +214,7 @@
                                             <outlet property="repsLabel" destination="tId-5e-0zK" id="tZd-ff-ufF"/>
                                             <outlet property="restLabel" destination="a9m-Ot-2sp" id="IgT-Qx-oUq"/>
                                             <outlet property="setsLabel" destination="wh6-cg-U5l" id="ahC-wL-Jh5"/>
+                                            <segue destination="agR-tj-wyY" kind="show" identifier="UpdateExercise" id="cRQ-fl-tmE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -324,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-94-MSL">
-                                <rect key="frame" x="30" y="52" width="330" height="350"/>
+                                <rect key="frame" x="30" y="148" width="330" height="350"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue5" translatesAutoresizingMaskIntoConstraints="NO" id="Bmo-s2-cZK">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="350"/>
@@ -509,6 +510,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5d6-Fg-kok" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JFb-aB-YPj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

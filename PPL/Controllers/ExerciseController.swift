@@ -33,6 +33,15 @@ class ExerciseController: UIViewController {
     }
     
     
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailController
+        if segue.identifier == "UpdateExercise" {
+            vc.exercise = exerciseArray[(exerciseArray.count-1) - ((tableView.indexPathForSelectedRow)!.row)]
+        }
+    }
+    
+    
     // MARK: - IBActions
     
     @IBAction func addExerciseTapped(_ sender: Any) {
@@ -112,61 +121,6 @@ extension ExerciseController: UITableViewDelegate, UITableViewDataSource {
             exerciseArray = ExerciseCoreDataManager.functions.fetchItem()!
             tableView.deleteRows(at: [indexPath], with: .bottom)
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let arrayIndexReverse = (exerciseArray.count - 1) - indexPath.row
-        let exercise          = self.exerciseArray[arrayIndexReverse]
-        var textField         = UITextField()
-        var textField1        = UITextField()
-        var textField2        = UITextField()
-        var textField3        = UITextField()
-        
-        let alert = UIAlertController(title: "Edit Exercise", message: "", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Update", style: .default) { (action) in
-            
-            exercise.name = textField.text!
-            exercise.sets = Int16(textField1.text!)!
-            exercise.reps = Int16(textField2.text!)!
-            exercise.rest = Int16(textField3.text!)!
-            
-            self.tableView.reloadData()
-        }
-        
-        alert.addAction(action)
-        
-        alert.addTextField { (field) in
-            textField               = field
-            textField.text          = exercise.name
-            textField.font          = UIFont(name: "Avenir", size: 19)
-            textField.textAlignment = .center
-        }
-        
-        alert.addTextField { (field) in
-            textField1              = field
-            textField1.text         = String(exercise.sets)
-            textField1.keyboardType = .numberPad
-            textField1.font         = UIFont(name: "Avenir", size: 19)
-            textField1.textAlignment = .center
-        }
-        
-        alert.addTextField { (field) in
-            textField2              = field
-            textField2.text         = String(exercise.reps)
-            textField2.keyboardType = .numberPad
-            textField2.font         = UIFont(name: "Avenir", size: 19)
-            textField2.textAlignment = .center
-        }
-        
-        alert.addTextField { (field) in
-            textField3              = field
-            textField3.text         = String(exercise.rest)
-            textField3.keyboardType = .numberPad
-            textField3.font         = UIFont(name: "Avenir", size: 19)
-            textField3.textAlignment = .center
-        }
-        present(alert, animated: true, completion: nil)
     }
 }
 
