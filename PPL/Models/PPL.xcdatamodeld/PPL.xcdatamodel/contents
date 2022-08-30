@@ -9,6 +9,6 @@
     </entity>
     <entity name="Session" representedClassName=".Session" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="parentCategory" inverseEntity="Exercise"/>
+        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="parentCategory" inverseEntity="Exercise"/>
     </entity>
 </model>

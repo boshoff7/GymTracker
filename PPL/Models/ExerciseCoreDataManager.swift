@@ -24,13 +24,13 @@ struct ExerciseCoreDataManager {
     
     // MARK: - Create Exercise
     func createItem(name: String, sets: String, reps: String, rest: String) -> Exercise? {
-        let context = persistentContainer.viewContext
-        let note = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as! Exercise
+        let context  = persistentContainer.viewContext
+        let exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: context) as! Exercise
         
-        note.name = name
-        note.sets = Int16(sets)!
-        note.reps = Int16(reps)!
-        note.rest = Int16(rest)!
+        exercise.name = name
+        exercise.sets = Int16(sets)!
+        exercise.reps = Int16(reps)!
+        exercise.rest = Int16(rest)!
         
         do {
             try context.save()

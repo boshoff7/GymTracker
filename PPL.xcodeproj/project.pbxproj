@@ -17,11 +17,11 @@
 		C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533928B8F6BC005EA707 /* DetailController.swift */; };
 		C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533B28B8F70E005EA707 /* ExerciseCell.swift */; };
 		C220533E28B9021A005EA707 /* ExerciseCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */; };
+		C25A473F28BE282C007B1FF7 /* SessionCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */; };
 		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
 		C286110328BCA8BE0025BEAC /* SessionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110228BCA8BE0025BEAC /* SessionsController.swift */; };
 		C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110428BCA9100025BEAC /* SessionsCell.swift */; };
-		C286110728BCD86F0025BEAC /* SessionCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110628BCD86E0025BEAC /* SessionCoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +37,11 @@
 		C220533928B8F6BC005EA707 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		C220533B28B8F70E005EA707 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCoreDataManager.swift; sourceTree = "<group>"; };
+		C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionCoreDataManager.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/SessionCoreDataManager.swift"; sourceTree = "<group>"; };
 		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C286110228BCA8BE0025BEAC /* SessionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsController.swift; sourceTree = "<group>"; };
 		C286110428BCA9100025BEAC /* SessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
-		C286110628BCD86E0025BEAC /* SessionCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +120,7 @@
 			children = (
 				C220532628B8EFBE005EA707 /* PPL.xcdatamodeld */,
 				C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */,
-				C286110628BCD86E0025BEAC /* SessionCoreDataManager.swift */,
+				C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
 				C220532228B8EFBE005EA707 /* ExerciseController.swift in Sources */,
 				C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */,
-				C286110728BCD86F0025BEAC /* SessionCoreDataManager.swift in Sources */,
+				C25A473F28BE282C007B1FF7 /* SessionCoreDataManager.swift in Sources */,
 				C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */,
 				C220532028B8EFBE005EA707 /* SceneDelegate.swift in Sources */,
 				C220533E28B9021A005EA707 /* ExerciseCoreDataManager.swift in Sources */,
