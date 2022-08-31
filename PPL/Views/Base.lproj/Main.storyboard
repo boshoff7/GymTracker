@@ -413,7 +413,7 @@
             </objects>
             <point key="canvasLocation" x="2" y="697"/>
         </scene>
-        <!--Calendar Controller-->
+        <!--Calendar-->
         <scene sceneID="4Gn-J4-HfT">
             <objects>
                 <viewController id="L7M-gS-00p" customClass="CalendarController" customModule="PPL" customModuleProvider="target" sceneMemberID="viewController">
@@ -423,13 +423,13 @@
                         <viewLayoutGuide key="safeArea" id="fOC-bJ-AeS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sYv-gh-Hnp"/>
+                    <navigationItem key="navigationItem" title="Calendar" largeTitleDisplayMode="always" id="sYv-gh-Hnp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUJ-kP-kW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1997" y="1388"/>
         </scene>
-        <!--Timer Controller-->
+        <!--Timer-->
         <scene sceneID="pgv-1a-r9z">
             <objects>
                 <viewController id="p9T-UI-NNg" customClass="TimerController" customModule="PPL" customModuleProvider="target" sceneMemberID="viewController">
@@ -438,7 +438,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-eB-5KQ">
-                                <rect key="frame" x="30" y="141" width="330" height="120"/>
+                                <rect key="frame" x="30" y="163" width="330" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="cpB-hE-0bb"/>
                                 </constraints>
@@ -447,10 +447,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-3c-LGg">
-                                <rect key="frame" x="30" y="341" width="330" height="40"/>
+                                <rect key="frame" x="30" y="333" width="330" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dY-rD-oSt">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="-15 sec">
                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
@@ -465,7 +465,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pli-yO-Xcj">
-                                        <rect key="frame" x="170" y="0.0" width="160" height="40"/>
+                                        <rect key="frame" x="170" y="0.0" width="160" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="+15 sec">
                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
@@ -481,13 +481,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="DJK-hW-AZM"/>
+                                    <constraint firstAttribute="height" constant="50" id="DJK-hW-AZM"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuB-ap-Lxk">
-                                <rect key="frame" x="200" y="471" width="160" height="40"/>
+                                <rect key="frame" x="200" y="473" width="160" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Tp3-sj-SPN"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tp3-sj-SPN"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start">
@@ -503,7 +503,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppd-NQ-xZX">
-                                <rect key="frame" x="90" y="644" width="19.666666666666671" height="60"/>
+                                <rect key="frame" x="90" y="656" width="19.666666666666671" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="46r-q3-pZv"/>
                                 </constraints>
@@ -512,9 +512,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkh-GV-73G">
-                                <rect key="frame" x="30" y="471" width="160" height="40"/>
+                                <rect key="frame" x="30" y="473" width="160" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="GAM-xi-vAh"/>
+                                    <constraint firstAttribute="height" constant="50" id="GAM-xi-vAh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Reset">
@@ -530,7 +530,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Counter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04a-be-3br">
-                                <rect key="frame" x="50" y="594" width="290" height="40"/>
+                                <rect key="frame" x="50" y="606" width="290" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rn6-pT-ZfG"/>
                                 </constraints>
@@ -539,7 +539,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctA-Io-jHb">
-                                <rect key="frame" x="285" y="652" width="49.666666666666686" height="40"/>
+                                <rect key="frame" x="285" y="664" width="49.666666666666686" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="XeC-Im-OHl"/>
                                 </constraints>
@@ -550,7 +550,7 @@
                                 </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="BTl-w5-vMp">
-                                <rect key="frame" x="156" y="667" width="94" height="60"/>
+                                <rect key="frame" x="156" y="679" width="94" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="61z-fJ-XgJ"/>
                                 </constraints>
@@ -564,7 +564,7 @@
                         <constraints>
                             <constraint firstItem="MuB-ap-Lxk" firstAttribute="top" secondItem="6x0-3c-LGg" secondAttribute="bottom" constant="90" id="798-lV-31v"/>
                             <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="MuB-ap-Lxk" secondAttribute="trailing" constant="30" id="7Ia-6p-rXo"/>
-                            <constraint firstItem="6x0-3c-LGg" firstAttribute="top" secondItem="mzG-eB-5KQ" secondAttribute="bottom" constant="80" id="A6G-ZQ-NXh"/>
+                            <constraint firstItem="6x0-3c-LGg" firstAttribute="top" secondItem="mzG-eB-5KQ" secondAttribute="bottom" constant="50" id="A6G-ZQ-NXh"/>
                             <constraint firstItem="ctA-Io-jHb" firstAttribute="leading" secondItem="BTl-w5-vMp" secondAttribute="trailing" constant="35" id="BRH-m3-ISN"/>
                             <constraint firstItem="04a-be-3br" firstAttribute="top" secondItem="MuB-ap-Lxk" secondAttribute="bottom" constant="83" id="DUs-hM-ri4"/>
                             <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="BTl-w5-vMp" secondAttribute="trailing" constant="140" id="Dwc-5G-r0F"/>
@@ -580,12 +580,12 @@
                             <constraint firstItem="fkh-GV-73G" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="30" id="i6l-b6-EsP"/>
                             <constraint firstItem="Ppd-NQ-xZX" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="90" id="lEw-Z6-0hL"/>
                             <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="04a-be-3br" secondAttribute="trailing" constant="50" id="mi4-fH-0Be"/>
-                            <constraint firstItem="mzG-eB-5KQ" firstAttribute="top" secondItem="XGy-y5-O2Y" secondAttribute="top" constant="50" id="ndT-H4-4v9"/>
+                            <constraint firstItem="mzG-eB-5KQ" firstAttribute="top" secondItem="XGy-y5-O2Y" secondAttribute="top" constant="20" id="ndT-H4-4v9"/>
                             <constraint firstItem="XGy-y5-O2Y" firstAttribute="trailing" secondItem="6x0-3c-LGg" secondAttribute="trailing" constant="30" id="qo0-EX-kcG"/>
                             <constraint firstItem="04a-be-3br" firstAttribute="leading" secondItem="XGy-y5-O2Y" secondAttribute="leading" constant="50" id="vA5-sK-qUg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kN4-8d-RMM"/>
+                    <navigationItem key="navigationItem" title="Timer" largeTitleDisplayMode="always" id="kN4-8d-RMM"/>
                     <connections>
                         <outlet property="clearStepper" destination="ctA-Io-jHb" id="M6z-dp-cB4"/>
                         <outlet property="repCounterLabel" destination="Ppd-NQ-xZX" id="g5i-Ct-2d2"/>
@@ -604,9 +604,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nk7-3G-QRV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="s8N-Kb-MHZ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d5c-Ow-52t">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="d5c-Ow-52t">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -645,9 +648,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fd-aG-sAT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="kC7-m1-RrZ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a4N-0c-N0f">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="a4N-0c-N0f">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.047058823530000002" green="0.14117647059999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -90,27 +90,30 @@ class ExerciseController: UITableViewController {
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Exercise"
-            titleTextField             = alertTextField
-            titleTextField.font        = UIFont(name: "Avenir", size: 19)
+            alertTextField.placeholder  = "Exercise"
+            titleTextField              = alertTextField
+            titleTextField.font         = UIFont(name: "Avenir", size: 19)
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Sets"
-            setsTextField              = alertTextField
-            setsTextField.font         = UIFont(name: "Avenir", size: 19)
+            alertTextField.placeholder  = "Sets"
+            setsTextField               = alertTextField
+            setsTextField.font          = UIFont(name: "Avenir", size: 19)
+            titleTextField.keyboardType = .numberPad
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Reps"
-            repsTextField              = alertTextField
-            repsTextField.font         = UIFont(name: "Avenir", size: 19)
+            alertTextField.placeholder  = "Reps"
+            repsTextField               = alertTextField
+            repsTextField.font          = UIFont(name: "Avenir", size: 19)
+            titleTextField.keyboardType = .numberPad
         }
         
         alert.addTextField { alertTextField in
-            alertTextField.placeholder = "Rest (Seconds)"
-            restTextField              = alertTextField
-            restTextField.font         = UIFont(name: "Avenir", size: 19)
+            alertTextField.placeholder  = "Rest (Seconds)"
+            restTextField               = alertTextField
+            restTextField.font          = UIFont(name: "Avenir", size: 19)
+            titleTextField.keyboardType = .numberPad
         }
         alert.addAction(action)
         present(alert, animated: true)

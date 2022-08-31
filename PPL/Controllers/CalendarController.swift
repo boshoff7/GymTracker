@@ -36,7 +36,7 @@ class CalendarController: UIViewController {
             calendarView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 10),
             calendarView.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: 10),
             calendarView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            calendarView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 100.0)
+            calendarView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 150.0)
         ])
     }
 }
@@ -48,6 +48,12 @@ extension CalendarController: UICalendarViewDelegate, UICalendarSelectionSingleD
     
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         isSelected = true
+        let sheet = UIAlertController(title: "Edit", message: "", preferredStyle: .actionSheet)
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        sheet.addAction(UIAlertAction(title: "Mark as Done", style: .default, handler: { _ in
+          
+        }))
+        present(sheet, animated: true)
     }
     
     func dateSelection(_ selection: UICalendarSelectionSingleDate, canSelectDate dateComponents: DateComponents?) -> Bool {
@@ -58,6 +64,6 @@ extension CalendarController: UICalendarViewDelegate, UICalendarSelectionSingleD
         let font            = UIFont.systemFont(ofSize: 15)
         let configuration   = UIImage.SymbolConfiguration(font: font)
         let image           = UIImage(systemName: "checkmark.circle", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
-        return .image(image)
+        return nil
     }
 }

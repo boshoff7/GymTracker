@@ -374,6 +374,7 @@
 				DEVELOPMENT_TEAM = BL54WB62T6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PPL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -402,6 +403,7 @@
 				DEVELOPMENT_TEAM = BL54WB62T6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PPL/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gym Tracker";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
