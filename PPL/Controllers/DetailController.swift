@@ -30,28 +30,24 @@ class DetailController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        if update == true {
-            nameTextField.text = exercise.name
-            setsTextField.text = String(exercise.sets)
-            repsTextField.text = String(exercise.reps)
-            restTextField.text = String(exercise.rest)
-            self.title = "Edit"
-//        } else {
-//            self.title = "Add new"
-//        }
+        nameTextField.text = exercise.name
+        setsTextField.text = String(exercise.sets)
+        repsTextField.text = String(exercise.reps)
+        restTextField.text = String(exercise.rest)
     }
 
     
     // MARK: - IBActions
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        if nameTextField.text! != "" && setsTextField.text! != "" && repsTextField.text! != "" && restTextField.text! != "" {
-            if update == true {
-                ExerciseCoreDataManager.functions.updateItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!, exerciseObject: exercise)
-            } else {
-                ExerciseCoreDataManager.functions.createItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!)
-            }
-            self.navigationController?.popViewController(animated: true)
-        }
         dismiss(animated: true)
+//        if nameTextField.text! != "" && setsTextField.text! != "" && repsTextField.text! != "" && restTextField.text! != "" {
+//            if update == true {
+//                ExerciseCoreDataManager.functions.updateItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!, exerciseObject: exercise)
+//            } else {
+//                ExerciseCoreDataManager.functions.createItem(name: nameTextField.text!, sets: setsTextField.text!, reps: repsTextField.text!, rest: restTextField.text!)
+//            }
+//            self.navigationController?.popViewController(animated: true)
+//        }
+//        dismiss(animated: true)
     }
 }

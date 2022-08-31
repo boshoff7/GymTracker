@@ -11,7 +11,6 @@ class SessionsCell: UITableViewCell {
 
     
     // MARK: - IBOutlets
-    @IBOutlet weak var dayLabel         : UILabel!
     @IBOutlet weak var sessionNameLabel : UILabel!
     
     

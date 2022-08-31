@@ -9,26 +9,25 @@
 /* Begin PBXBuildFile section */
 		C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220531D28B8EFBE005EA707 /* AppDelegate.swift */; };
 		C220532028B8EFBE005EA707 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220531F28B8EFBE005EA707 /* SceneDelegate.swift */; };
-		C220532228B8EFBE005EA707 /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220532128B8EFBE005EA707 /* ExerciseController.swift */; };
 		C220532528B8EFBE005EA707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C220532328B8EFBE005EA707 /* Main.storyboard */; };
 		C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C220532628B8EFBE005EA707 /* PPL.xcdatamodeld */; };
 		C220532A28B8EFC3005EA707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C220532928B8EFC3005EA707 /* Assets.xcassets */; };
 		C220532D28B8EFC3005EA707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C220532B28B8EFC3005EA707 /* LaunchScreen.storyboard */; };
 		C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533928B8F6BC005EA707 /* DetailController.swift */; };
 		C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533B28B8F70E005EA707 /* ExerciseCell.swift */; };
-		C220533E28B9021A005EA707 /* ExerciseCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */; };
-		C25A473F28BE282C007B1FF7 /* SessionCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */; };
 		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
-		C286110328BCA8BE0025BEAC /* SessionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110228BCA8BE0025BEAC /* SessionsController.swift */; };
 		C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110428BCA9100025BEAC /* SessionsCell.swift */; };
+		C2E3CF0328BF85CA00A0082C /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */; };
+		C2E3CF0528BF85DC00A0082C /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0428BF85DC00A0082C /* SessionController.swift */; };
+		C2E3CF0928BF9F9900A0082C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */; };
+		C2E3CF0D28BFA86200A0082C /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0C28BFA86200A0082C /* CalendarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C220531A28B8EFBE005EA707 /* PPL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C220531D28B8EFBE005EA707 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C220531F28B8EFBE005EA707 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C220532128B8EFBE005EA707 /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
 		C220532428B8EFBE005EA707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C220532728B8EFBE005EA707 /* PPL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PPL.xcdatamodel; sourceTree = "<group>"; };
 		C220532928B8EFC3005EA707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,12 +35,13 @@
 		C220532E28B8EFC3005EA707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C220533928B8F6BC005EA707 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		C220533B28B8F70E005EA707 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
-		C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCoreDataManager.swift; sourceTree = "<group>"; };
-		C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionCoreDataManager.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/SessionCoreDataManager.swift"; sourceTree = "<group>"; };
 		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
-		C286110228BCA8BE0025BEAC /* SessionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsController.swift; sourceTree = "<group>"; };
 		C286110428BCA9100025BEAC /* SessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
+		C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		C2E3CF0428BF85DC00A0082C /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C2E3CF0C28BFA86200A0082C /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +97,11 @@
 		C220533528B8F625005EA707 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C220532128B8EFBE005EA707 /* ExerciseController.swift */,
 				C220533928B8F6BC005EA707 /* DetailController.swift */,
 				C286110028BCA4C40025BEAC /* TimerController.swift */,
-				C286110228BCA8BE0025BEAC /* SessionsController.swift */,
+				C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */,
+				C2E3CF0428BF85DC00A0082C /* SessionController.swift */,
+				C2E3CF0C28BFA86200A0082C /* CalendarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,8 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C220532628B8EFBE005EA707 /* PPL.xcdatamodeld */,
-				C220533D28B9021A005EA707 /* ExerciseCoreDataManager.swift */,
-				C25A473E28BE282C007B1FF7 /* SessionCoreDataManager.swift */,
+				C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,17 +214,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
+				C2E3CF0D28BFA86200A0082C /* CalendarController.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
 				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
-				C220532228B8EFBE005EA707 /* ExerciseController.swift in Sources */,
+				C2E3CF0328BF85CA00A0082C /* ExerciseController.swift in Sources */,
 				C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */,
-				C25A473F28BE282C007B1FF7 /* SessionCoreDataManager.swift in Sources */,
 				C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */,
 				C220532028B8EFBE005EA707 /* SceneDelegate.swift in Sources */,
-				C220533E28B9021A005EA707 /* ExerciseCoreDataManager.swift in Sources */,
-				C286110328BCA8BE0025BEAC /* SessionsController.swift in Sources */,
 				C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */,
 				C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */,
+				C2E3CF0528BF85DC00A0082C /* SessionController.swift in Sources */,
+				C2E3CF0928BF9F9900A0082C /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ class TimerController: UIViewController {
         super.viewDidLoad()
         
         self.timerLabel.text = timeString(time: TimeInterval(timeRemaining))
-        stepper.transform    = stepper.transform.scaledBy(x: 1.25, y: 1.25)
+        stepper.transform    = stepper.transform.scaledBy(x: 1.70, y: 1.70)
     }
     
     

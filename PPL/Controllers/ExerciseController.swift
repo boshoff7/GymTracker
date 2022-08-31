@@ -1,35 +1,60 @@
 //
-//  ViewController.swift
+//  ExerciseTableController.swift
 //  PPL
 //
-//  Created by Chris Boshoff on 2022/08/26.
+//  Created by Chris Boshoff on 2022/08/31.
 //
 
 import UIKit
+import CoreData
 
-class ExerciseController: UIViewController {
-    
-    // MARK: - IBOutlets
-    @IBOutlet weak var tableView: UITableView!
-    
+class ExerciseController: UITableViewController {
     
     // MARK: - Initializers
-    var exercise      : Exercise!
-    var exerciseArray = [Exercise]()
-    let context       = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var update        = false
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var exerciseArray   = [Exercise]()
+    var selectedSession : Session? {
+        didSet {
+            loadExercises()
+        }
+    }
+
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate   = self
-        tableView.dataSource = self
+    }
+
+    // MARK: - Table View Delegate and Datasource Methods
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exerciseArray.count
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        exerciseArray = ExerciseCoreDataManager.functions.fetchItem()!
-        self.tableView.reloadData()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as! ExerciseCell
+        let item = exerciseArray[indexPath.row]
+
+        cell.nameLabel.text = item.name
+        cell.setsLabel.text = String(item.sets)
+        cell.repsLabel.text = String(item.reps)
+        cell.restLabel.text = String(item.rest)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            context.delete(exerciseArray[indexPath.row])
+            exerciseArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            CoreDataManager.functions.saveExercise()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
@@ -40,87 +65,74 @@ class ExerciseController: UIViewController {
             vc.exercise = exerciseArray[(exerciseArray.count-1) - ((tableView.indexPathForSelectedRow)!.row)]
         }
     }
-    
+
     
     // MARK: - IBActions
-    
-    @IBAction func addExerciseTapped(_ sender: Any) {
-        var textField  = UITextField()
-        var textField1 = UITextField()
-        var textField2 = UITextField()
-        var textField3 = UITextField()
+    @IBAction func addExerciseTapped(_ sender: UIBarButtonItem) {
+        var titleTextField = UITextField()
+        var setsTextField  = UITextField()
+        var repsTextField  = UITextField()
+        var restTextField  = UITextField()
         
-        let alert = UIAlertController(title: "Add New Exercise", message: "", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            
-            let newExercise  = Exercise(context: self.context)
-            newExercise.name = textField.text!
-            newExercise.sets = Int16(textField1.text!)!
-            newExercise.reps = Int16(textField2.text!)!
-            newExercise.rest = Int16(textField3.text!)!
-            
+        let alert  = UIAlertController(title: "Add New Exercise", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Exercise", style: .default) { action in
+            let newExercise            = Exercise(context: self.context)
+            newExercise.name           = titleTextField.text!
+            newExercise.sets           = Int16(setsTextField.text!)!
+            newExercise.reps           = Int16(repsTextField.text!)!
+            newExercise.rest           = Int16(restTextField.text!)!
+            newExercise.parentCategory = self.selectedSession
             self.exerciseArray.append(newExercise)
+            CoreDataManager.functions.saveExercise()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Exercise"
+            titleTextField             = alertTextField
+            titleTextField.font        = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Sets"
+            setsTextField              = alertTextField
+            setsTextField.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Reps"
+            repsTextField              = alertTextField
+            repsTextField.font         = UIFont(name: "Avenir", size: 19)
+        }
+        
+        alert.addTextField { alertTextField in
+            alertTextField.placeholder = "Rest (Seconds)"
+            restTextField              = alertTextField
+            restTextField.font         = UIFont(name: "Avenir", size: 19)
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
+    
+    // MARK: - Core Data
+    
+    func loadExercises(with request: NSFetchRequest<Exercise> = Exercise.fetchRequest(), predicate: NSPredicate? = nil) {
+        let sessionPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedSession!.name!)
+        if let additionalPredicate = predicate {
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [sessionPredicate, additionalPredicate])
+        } else {
+            request.predicate = sessionPredicate
+        }
+        do {
+            exerciseArray = try context.fetch(request)
+        } catch {
+            
+        }
+        DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
-        alert.addAction(action)
-        
-        alert.addTextField { (field) in
-            textField             = field
-            textField.placeholder = "Exercise name"
-            textField.font        = UIFont(name: "Avenir", size: 19)
-        }
-        
-        alert.addTextField { (field) in
-            textField1              = field
-            textField1.placeholder  = "Sets"
-            textField1.keyboardType = .numberPad
-            textField1.font         = UIFont(name: "Avenir", size: 19)
-        }
-        
-        alert.addTextField { (field) in
-            textField2              = field
-            textField2.placeholder  = "Reps"
-            textField2.keyboardType = .numberPad
-            textField2.font         = UIFont(name: "Avenir", size: 19)
-        }
-        
-        alert.addTextField { (field) in
-            textField3              = field
-            textField3.placeholder  = "Rest (seconds)"
-            textField3.keyboardType = .numberPad
-            textField3.font         = UIFont(name: "Avenir", size: 19)
-        }
-        present(alert, animated: true, completion: nil)
     }
 }
-
-// MARK: - TableView Delegate and Datasource Methods
-
-extension ExerciseController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exerciseArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let arrayIndexReverse = (exerciseArray.count - 1) - indexPath.row
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as! ExerciseCell
-        cell.layer.cornerRadius = 10
-        cell.nameLabel.text = exerciseArray[arrayIndexReverse].name
-        cell.setsLabel.text = String(exerciseArray[arrayIndexReverse].sets)
-        cell.repsLabel.text = String(exerciseArray[arrayIndexReverse].reps)
-        cell.restLabel.text = String(exerciseArray[arrayIndexReverse].rest)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let arrayIndexReverse = (exerciseArray.count - 1) - indexPath.section
-            ExerciseCoreDataManager.functions.deleteItem(exerciseObject: exerciseArray[arrayIndexReverse])
-            exerciseArray = ExerciseCoreDataManager.functions.fetchItem()!
-            tableView.deleteRows(at: [indexPath], with: .bottom)
-        }
-    }
-}
-
