@@ -15,7 +15,7 @@ class CalendarController: UIViewController {
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         displayCalendar()
     }
     
@@ -48,12 +48,12 @@ extension CalendarController: UICalendarViewDelegate, UICalendarSelectionSingleD
     
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
         isSelected = true
-        let sheet = UIAlertController(title: "Edit", message: "", preferredStyle: .actionSheet)
-        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        sheet.addAction(UIAlertAction(title: "Mark as Done", style: .default, handler: { _ in
-          
-        }))
-        present(sheet, animated: true)
+//        let sheet = UIAlertController(title: "Edit", message: "", preferredStyle: .actionSheet)
+//        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//        sheet.addAction(UIAlertAction(title: "Mark as Done", style: .default, handler: { _ in
+//        
+//        }))
+//        present(sheet, animated: true)
     }
     
     func dateSelection(_ selection: UICalendarSelectionSingleDate, canSelectDate dateComponents: DateComponents?) -> Bool {
@@ -61,9 +61,12 @@ extension CalendarController: UICalendarViewDelegate, UICalendarSelectionSingleD
     }
     
     func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
-        let font            = UIFont.systemFont(ofSize: 15)
-        let configuration   = UIImage.SymbolConfiguration(font: font)
-        let image           = UIImage(systemName: "checkmark.circle", withConfiguration: configuration)?.withRenderingMode(.alwaysOriginal)
+        guard let day = dateComponents.day else {
+            return nil
+        }
+        if isSelected == true {
+            return UICalendarView.Decoration.default(color: .systemBlue, size: .large)
+        }
         return nil
     }
 }

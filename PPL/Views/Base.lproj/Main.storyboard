@@ -202,7 +202,6 @@
                                     <outlet property="repsLabel" destination="ajU-Kh-RMA" id="IyA-TY-Uz0"/>
                                     <outlet property="restLabel" destination="Toy-yc-o3T" id="ivo-G7-HmQ"/>
                                     <outlet property="setsLabel" destination="9Dv-Kr-4I0" id="ZJN-bl-2JY"/>
-                                    <segue destination="agR-tj-wyY" kind="show" identifier="UpdateExercise" id="43z-6h-msR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -232,7 +231,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-94-MSL">
-                                <rect key="frame" x="30" y="148" width="330" height="350"/>
+                                <rect key="frame" x="30" y="52" width="330" height="350"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue5" translatesAutoresizingMaskIntoConstraints="NO" id="Bmo-s2-cZK">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="350"/>
