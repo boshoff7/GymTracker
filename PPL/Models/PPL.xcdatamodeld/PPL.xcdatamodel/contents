@@ -6,9 +6,16 @@
         <attribute name="rest" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sets" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="exercise" inverseEntity="Session"/>
+        <relationship name="wsr" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WSR" inverseName="wsrCategory" inverseEntity="WSR"/>
     </entity>
     <entity name="Session" representedClassName=".Session" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String"/>
         <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="parentCategory" inverseEntity="Exercise"/>
+    </entity>
+    <entity name="WSR" representedClassName="WSR" syncable="YES" codeGenerationType="class">
+        <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sets" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="wsrCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="wsr" inverseEntity="Exercise"/>
     </entity>
 </model>

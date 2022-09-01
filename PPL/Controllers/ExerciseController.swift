@@ -25,6 +25,15 @@ class ExerciseController: UITableViewController {
         super.viewDidLoad()
     }
     
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! DetailController
+        if let indexPath  = tableView.indexPathForSelectedRow {
+            destinationVC.selectedExercise = exerciseArray[indexPath.row]
+        }
+    }
+    
     // MARK: - Table View Delegate and Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
