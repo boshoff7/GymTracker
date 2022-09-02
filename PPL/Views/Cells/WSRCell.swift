@@ -7,18 +7,22 @@
 
 import UIKit
 
+protocol WSRProtocol {
+    func weight(weight: Int16)
+}
+
 class WSRCell: UITableViewCell {
- 
-    
 
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var setLabel: UILabel!
 
+    var delegate: WSRProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     
+        delegate?.weight(weight: Int16(weightTextField.text!)!)
     }
     
 

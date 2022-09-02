@@ -13,8 +13,10 @@
 		C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C220532628B8EFBE005EA707 /* PPL.xcdatamodeld */; };
 		C220532A28B8EFC3005EA707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C220532928B8EFC3005EA707 /* Assets.xcassets */; };
 		C220532D28B8EFC3005EA707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C220532B28B8EFC3005EA707 /* LaunchScreen.storyboard */; };
-		C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533928B8F6BC005EA707 /* DetailController.swift */; };
 		C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220533B28B8F70E005EA707 /* ExerciseCell.swift */; };
+		C253415928C1EE2000A3C94D /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415828C1EE2000A3C94D /* QuoteController.swift */; };
+		C253415B28C1EE9300A3C94D /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415A28C1EE9300A3C94D /* QuoteModel.swift */; };
+		C253415D28C1F01D00A3C94D /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415C28C1F01D00A3C94D /* QuoteManager.swift */; };
 		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
 		C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110428BCA9100025BEAC /* SessionsCell.swift */; };
@@ -34,8 +36,10 @@
 		C220532928B8EFC3005EA707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C220532C28B8EFC3005EA707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C220532E28B8EFC3005EA707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C220533928B8F6BC005EA707 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		C220533B28B8F70E005EA707 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		C253415828C1EE2000A3C94D /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
+		C253415A28C1EE9300A3C94D /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		C253415C28C1F01D00A3C94D /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
 		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C286110428BCA9100025BEAC /* SessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
@@ -99,11 +103,11 @@
 		C220533528B8F625005EA707 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C220533928B8F6BC005EA707 /* DetailController.swift */,
 				C286110028BCA4C40025BEAC /* TimerController.swift */,
 				C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */,
 				C2E3CF0428BF85DC00A0082C /* SessionController.swift */,
 				C2E3CF0C28BFA86200A0082C /* CalendarController.swift */,
+				C253415828C1EE2000A3C94D /* QuoteController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +127,8 @@
 			children = (
 				C220532628B8EFBE005EA707 /* PPL.xcdatamodeld */,
 				C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */,
+				C253415A28C1EE9300A3C94D /* QuoteModel.swift */,
+				C253415C28C1F01D00A3C94D /* QuoteManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,13 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C253415B28C1EE9300A3C94D /* QuoteModel.swift in Sources */,
+				C253415928C1EE2000A3C94D /* QuoteController.swift in Sources */,
 				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
 				C2E3CF0D28BFA86200A0082C /* CalendarController.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
 				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
+				C253415D28C1F01D00A3C94D /* QuoteManager.swift in Sources */,
 				C2E3CF0328BF85CA00A0082C /* ExerciseController.swift in Sources */,
 				C220531E28B8EFBE005EA707 /* AppDelegate.swift in Sources */,
-				C220533A28B8F6BC005EA707 /* DetailController.swift in Sources */,
 				C220532028B8EFBE005EA707 /* SceneDelegate.swift in Sources */,
 				C220533C28B8F70E005EA707 /* ExerciseCell.swift in Sources */,
 				C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */,
