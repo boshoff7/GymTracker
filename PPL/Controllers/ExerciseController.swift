@@ -25,14 +25,7 @@ class ExerciseController: UITableViewController {
         super.viewDidLoad()
     }
     
-    
-    // MARK: - Segue
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationVC = segue.destination as! DetailController
-//        if let indexPath  = tableView.indexPathForSelectedRow {
-//            destinationVC.selectedExercise = exerciseArray[indexPath.row]
-//        }
-//    }
+
     
     // MARK: - Table View Delegate and Datasource Methods
     
@@ -135,6 +128,7 @@ class ExerciseController: UITableViewController {
         
         let alert  = UIAlertController(title: "Add New Exercise", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Exercise", style: .default) { action in
+            if titleTextField.text != "" && setsTextField.text != "" && repsTextField.text != "" && restTextField.text != "" {
             let newExercise            = Exercise(context: self.context)
             newExercise.name           = titleTextField.text!
             newExercise.sets           = Int16(setsTextField.text!)!
@@ -143,8 +137,14 @@ class ExerciseController: UITableViewController {
             newExercise.parentCategory = self.selectedSession
             self.exerciseArray.append(newExercise)
             CoreDataManager.functions.saveExercise()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else {
+                let alert  = UIAlertController(title: "No Text", message: "Please make sure that you add a value to all the text fields", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .cancel)
+                alert.addAction(action)
+                self.present(alert, animated: true)
             }
         }
         

@@ -456,9 +456,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IrH-ED-uuT"/>
                                 </constraints>
+                                <color key="tintColor" red="0.011764705882352941" green="0.14509803921568626" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get Quote">
                                     <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.01176470588" green="0.1450980392" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="getQuoteButton:" destination="rRB-FR-jWR" eventType="touchUpInside" id="SFb-sT-bjB"/>

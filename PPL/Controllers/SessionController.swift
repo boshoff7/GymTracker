@@ -127,11 +127,17 @@ class SessionController: UITableViewController {
         var textField = UITextField()
         let alert     = UIAlertController(title: "Add New Session", message: "", preferredStyle: .alert)
         let action    = UIAlertAction(title: "Add", style: .default) { (action) in
-            
-            let newSession  = Session(context: self.context)
-            newSession.name = textField.text!
-            self.session.append(newSession)
-            self.saveSession()
+            if textField.text != "" {
+                let newSession  = Session(context: self.context)
+                newSession.name = textField.text!
+                self.session.append(newSession)
+                self.saveSession()
+            } else {
+                let alert  = UIAlertController(title: "No Text", message: "Please make sure you add a title for the new session", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .cancel)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
         
         alert.addAction(action)
