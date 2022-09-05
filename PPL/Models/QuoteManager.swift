@@ -13,6 +13,8 @@ protocol QuoteProtocol {
 
 struct QuoteManager {
     
+    let API_KEY = "X-RapidAPI-Key"
+    
     var delegate: QuoteProtocol?
     
     func QuoteAPI() {
