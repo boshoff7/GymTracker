@@ -17,7 +17,6 @@
 		C253415928C1EE2000A3C94D /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415828C1EE2000A3C94D /* QuoteController.swift */; };
 		C253415B28C1EE9300A3C94D /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415A28C1EE9300A3C94D /* QuoteModel.swift */; };
 		C253415D28C1F01D00A3C94D /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253415C28C1F01D00A3C94D /* QuoteManager.swift */; };
-		C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */; };
 		C286110128BCA4C40025BEAC /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110028BCA4C40025BEAC /* TimerController.swift */; };
 		C286110528BCA9100025BEAC /* SessionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C286110428BCA9100025BEAC /* SessionsCell.swift */; };
 		C2E3CF0328BF85CA00A0082C /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */; };
@@ -39,7 +38,6 @@
 		C253415828C1EE2000A3C94D /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 		C253415A28C1EE9300A3C94D /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		C253415C28C1F01D00A3C94D /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
-		C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		C286110028BCA4C40025BEAC /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C286110428BCA9100025BEAC /* SessionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCell.swift; sourceTree = "<group>"; };
 		C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 				C220533628B8F62C005EA707 /* Views */,
 				C220533528B8F625005EA707 /* Controllers */,
 				C220533428B8F61D005EA707 /* Resources */,
-				C28610FD28BC9FD00025BEAC /* Extensions */,
 				C220531D28B8EFBE005EA707 /* AppDelegate.swift */,
 				C220531F28B8EFBE005EA707 /* SceneDelegate.swift */,
 				C220532E28B8EFC3005EA707 /* Info.plist */,
@@ -138,14 +135,6 @@
 				C2EF04F228C0C21000579FF0 /* WSRCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		C28610FD28BC9FD00025BEAC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C28610FE28BCA00D0025BEAC /* Keyboard+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +210,6 @@
 			files = (
 				C253415B28C1EE9300A3C94D /* QuoteModel.swift in Sources */,
 				C253415928C1EE2000A3C94D /* QuoteController.swift in Sources */,
-				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
 				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
 				C253415D28C1F01D00A3C94D /* QuoteManager.swift in Sources */,
