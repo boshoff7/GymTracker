@@ -27,12 +27,12 @@ class ExerciseController: UITableViewController {
     
     
     // MARK: - Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! DetailController
-        if let indexPath  = tableView.indexPathForSelectedRow {
-            destinationVC.selectedExercise = exerciseArray[indexPath.row]
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationVC = segue.destination as! DetailController
+//        if let indexPath  = tableView.indexPathForSelectedRow {
+//            destinationVC.selectedExercise = exerciseArray[indexPath.row]
+//        }
+//    }
     
     // MARK: - Table View Delegate and Datasource Methods
     

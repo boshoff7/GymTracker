@@ -23,7 +23,6 @@
 		C2E3CF0328BF85CA00A0082C /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */; };
 		C2E3CF0528BF85DC00A0082C /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0428BF85DC00A0082C /* SessionController.swift */; };
 		C2E3CF0928BF9F9900A0082C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */; };
-		C2E3CF0D28BFA86200A0082C /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3CF0C28BFA86200A0082C /* CalendarController.swift */; };
 		C2EF04F328C0C21000579FF0 /* WSRCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF04F228C0C21000579FF0 /* WSRCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
 		C2E3CF0428BF85DC00A0082C /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		C2E3CF0828BF9F9900A0082C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		C2E3CF0C28BFA86200A0082C /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		C2EF04F228C0C21000579FF0 /* WSRCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +104,6 @@
 				C286110028BCA4C40025BEAC /* TimerController.swift */,
 				C2E3CF0228BF85CA00A0082C /* ExerciseController.swift */,
 				C2E3CF0428BF85DC00A0082C /* SessionController.swift */,
-				C2E3CF0C28BFA86200A0082C /* CalendarController.swift */,
 				C253415828C1EE2000A3C94D /* QuoteController.swift */,
 			);
 			path = Controllers;
@@ -225,7 +222,6 @@
 				C253415B28C1EE9300A3C94D /* QuoteModel.swift in Sources */,
 				C253415928C1EE2000A3C94D /* QuoteController.swift in Sources */,
 				C28610FF28BCA00D0025BEAC /* Keyboard+Extensions.swift in Sources */,
-				C2E3CF0D28BFA86200A0082C /* CalendarController.swift in Sources */,
 				C220532828B8EFBE005EA707 /* PPL.xcdatamodeld in Sources */,
 				C286110128BCA4C40025BEAC /* TimerController.swift in Sources */,
 				C253415D28C1F01D00A3C94D /* QuoteManager.swift in Sources */,
